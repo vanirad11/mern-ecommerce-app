@@ -31,7 +31,7 @@ app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 //middleware
-app.use(cors(origin: "mern-ecommerce-app-client-seven.vercel.app", credentials: true));
+app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
