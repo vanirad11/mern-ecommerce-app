@@ -26,12 +26,12 @@ const app = express();
 
 // Increase the limit for JSON payloads to 10MB
 app.use(bodyParser.json({ limit: '10mb' }));
-
+  
 // Increase the limit for URL-encoded payloads (form submissions) to 10MB
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 //middleware
-app.use(cors());
+app.use(cors(origin: "mern-ecommerce-app-client-seven.vercel.app", credentials: true));
 app.use(express.json());
 app.use(morgan('dev'));
 
